@@ -17,12 +17,15 @@ body {
     width: 80%;
     max-width: 1200px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    padding: 40px;
-    border-radius: 15px;
-    background-color: rgba(138, 173, 187, 0.288);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    grid-template-areas: 
+    'div1 div1 div1 div1 div2 div2 div3 div3'
+    'div1 div1 div1 div1 div2 div2 div3 div3'
+    'div4 div4 div5 div5 div5 div5 div3 div3'
+    'div4 div4 div5 div5 div5 div5 div3 div3'
+    ;
 }
 
 .item {
@@ -40,26 +43,31 @@ body {
 .item1 {
     background-color: rgb(80, 46, 126);
     color: white;
+    grid-area: div1;
 }
 
 .item2 {
     background-color: rgb(94, 92, 151);
     color: white;
+    grid-area: div2;
 }
 
 .item3 {
     background-color: rgb(146, 94, 173);
     color: rgb(173, 170, 170);
+    grid-area: div3;
 }
 
 .item4 {
     background-color: rgb(60, 131, 152);
     color: white;
+    grid-area: div4;
 }
 
 .item5 {
     background-color: rgb(39, 45, 54);
     color: white;
+    grid-area: div5;
 }
 
 h3 {
@@ -85,7 +93,7 @@ p {
     border-radius: 50%;
     margin-bottom: 15px; 
     object-fit: cover;
-    border: 3px solid rgb(80, 46, 126);
+    border: 3px solid rgb(210, 100, 214);
 
 }
 
